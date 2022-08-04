@@ -15,7 +15,7 @@ const initUserinfo = () => {
     url: "/my/userinfo",
     data: null,
     success: res => {
-      console.log(res);
+      // console.log(res);
       const { status, message, data } = res;
       if (status !== 0) return layer.msg(message)
       form.val("formUserInfo", data);
