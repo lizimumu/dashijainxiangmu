@@ -1,10 +1,10 @@
-const getUserinfo = () => {
+function getUserinfo() {
   $.ajax({
     type: 'GET',
     url: '/my/userinfo',
     data: null,
     success: res => {
-      console.log(res);
+      // console.log(res);
       const { status, message } = res
       if (status !== 0) return layer.msg(message)
 
@@ -14,7 +14,7 @@ const getUserinfo = () => {
 }
 const renderAvatar = data => {
   let name = data.nickname || data.username
-  console.log(name);
+  // console.log(name);
   $('#welcome').html(`欢迎 ${name}`);
 
   // 按需渲染用户头像
